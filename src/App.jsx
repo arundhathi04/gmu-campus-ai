@@ -11,9 +11,7 @@ function App() {
   const [showCourses, setShowCourses] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState(null);
 
-  // =========================
-  // VOICE OUTPUT
-  // =========================
+  
   const speak = (text) => {
     if (!("speechSynthesis" in window)) return;
 
@@ -26,9 +24,7 @@ function App() {
     window.speechSynthesis.speak(speech);
   };
 
-  // =========================
-  // ASK AI
-  // =========================
+  
   const askQuestion = async (
     text = question,
     speakAnswer = false
@@ -77,9 +73,7 @@ function App() {
     }
   };
 
-  // =========================
-  // VOICE ASSISTANT
-  // =========================
+ 
   const startVoiceAssistant = () => {
     const SpeechRecognition =
       window.SpeechRecognition ||
@@ -123,9 +117,6 @@ function App() {
     recognition.start();
   };
 
-  // =========================
-  // CAMPUS SERVICES
-  // =========================
   const services = [
     {
       icon: "📚",
@@ -226,9 +217,6 @@ function App() {
     },
   ];
 
-  // =========================
-  // COURSES + BRANCHES
-  // =========================
   const courses = [
     {
       icon: "⚙️",
