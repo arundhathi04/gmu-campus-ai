@@ -29,17 +29,9 @@ button {
   cursor: pointer;
 }
 
-/* =========================================
-   APP
-========================================= */
-
 .app {
   min-height: 100vh;
 }
-
-/* =========================================
-   HEADER
-========================================= */
 
 .header {
   min-height: 76px;
@@ -80,19 +72,11 @@ button {
   font-weight: 700;
 }
 
-/* =========================================
-   MAIN
-========================================= */
-
 .main {
   width: min(1120px, 90%);
   margin: 0 auto;
   padding: 70px 0 90px;
 }
-
-/* =========================================
-   HERO
-========================================= */
 
 .hero {
   max-width: 850px;
@@ -118,10 +102,6 @@ button {
   font-size: 18px;
   line-height: 1.7;
 }
-
-/* =========================================
-   AI QUESTION BOX
-========================================= */
 
 .question-box {
   width: min(920px, 100%);
@@ -168,8 +148,6 @@ button {
   color: #98a2b3;
 }
 
-/* Ask AI */
-
 .question-box > button:last-child {
   min-height: 50px;
   padding: 0 25px;
@@ -194,8 +172,6 @@ button {
   transform: translateY(-1px);
   box-shadow: 0 8px 18px rgba(23, 63, 122, 0.22);
 }
-
-/* Voice */
 
 .voice-button {
   width: 50px;
@@ -223,10 +199,6 @@ button {
   transform: translateY(-1px);
 }
 
-/* =========================================
-   VOICE STATUS
-========================================= */
-
 .voice-status {
   width: fit-content;
   margin: 12px auto 25px;
@@ -241,10 +213,6 @@ button {
   font-size: 13px;
   font-weight: 700;
 }
-
-/* =========================================
-   AI ANSWER
-========================================= */
 
 .answer-box {
   width: min(920px, 100%);
@@ -303,11 +271,6 @@ button {
   color: #7a8496;
   font-size: 15px;
 }
-
-/* =========================================
-   SERVICE CARDS
-========================================= */
-
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -378,15 +341,10 @@ button {
   font-size: 13px;
   line-height: 1.4;
 }
-
-/* =========================================
-   COURSES
-========================================= */
-
 .courses-section {
   padding: 34px;
 
-  background: #ffffff;
+  background: #fff
 
   border: 1px solid #e4e9f1;
   border-radius: 24px;
@@ -673,10 +631,6 @@ button {
 .modal-ask:hover {
   background: #102f61;
 }
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 900px) {
   .cards,
