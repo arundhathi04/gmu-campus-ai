@@ -1,3 +1,4 @@
+
 const express = require("express");
 const cors = require("cors");
 const campusData = require("./campusData");
@@ -14,7 +15,13 @@ app.get("/", (req, res) => {
 });
 
 app.post("/ask", (req, res) => {
-  const question = req.body.question.toLowerCase();
+  const question = String(req.body?.question || "").toLowerCase();
+
+  if (!question.trim()) {
+    return res.status(400).json({
+      answer: "Please enter a question."
+    });
+  }
 
   let answer =
     "🤖 I couldn't find that information. Please try asking about the library, hostel, admission, transport, canteen, offices or campus.";
@@ -102,7 +109,7 @@ app.post("/ask", (req, res) => {
     answer = `🏢 ${campusData.offices.principal}`;
   }
 
-  // VC
+  // Vice Chancellor
   else if (
     question.includes("vc") ||
     question.includes("vice chancellor")
@@ -130,10 +137,8 @@ app.post("/ask", (req, res) => {
   res.json({ answer });
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(
-    `GMU Campus AI server running on http://localhost:${PORT}`
-  );
+  console.log(`GMU Campus AI server running on port ${PORT}`);
 });
